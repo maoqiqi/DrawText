@@ -94,7 +94,7 @@ public class MyView4 extends View {
         Log.e(TAG, "bounds:" + bounds.toShortString());
         params.setTextBounds(bounds);
 
-//        canvas.drawText(text, 0, params.getLineBaseline(0), textPaint);
+        canvas.drawText(text, 0, params.getLineBaseline(0), textPaint);
 //        canvas.drawRect(params.getLineContentArea(0), strokePaint);
 
         paint.setColor(Color.RED);
@@ -114,18 +114,18 @@ public class MyView4 extends View {
 //        Log.e(TAG, "calculate.getLineBaseline(1):" + calculate.getLineBaseline(1));
 
 
-//        text = ",AfC,中";
+        text = ",AfC,中";
         textPaint.setColor(Color.GREEN);
         textPaint.getTextBounds(text, 0, text.length(), bounds);
         Log.e(TAG, "bounds:" + bounds.toShortString());
-//        canvas.drawText(text, 0, params.getLineBaseline(1), textPaint);
+        canvas.drawText(text, 0, params.getLineBaseline(1), textPaint);
 //        canvas.drawRect(params.getLineContentArea(1), strokePaint);
 
-//        text = "中";
+        text = "中";
         textPaint.setColor(Color.YELLOW);
         textPaint.getTextBounds(text, 0, text.length(), bounds);
         Log.e(TAG, "bounds:" + bounds.toShortString());
-//        canvas.drawText(text, 0, params.getLineBaseline(2), textPaint);
+        canvas.drawText(text, 0, params.getLineBaseline(2), textPaint);
 //        canvas.drawRect(params.getLineContentArea(2), strokePaint);
 
 //        canvas.drawLine(0, areaHeight, DESIGN_WIDTH, areaHeight, paint);
@@ -136,7 +136,7 @@ public class MyView4 extends View {
 //        canvas.drawLine(0, calculate.getAscent() + areaHeight, DESIGN_WIDTH, calculate.getAscent() + areaHeight, paint);
 //        canvas.drawLine(0, calculate.getAscent() + areaHeight + areaHeight, DESIGN_WIDTH, calculate.getAscent() + areaHeight + areaHeight, paint);
 
-        paint.setColor(Color.WHITE);
+        paint.setColor(Color.RED);
         canvas.drawLine(0, params.getDescent(), DESIGN_WIDTH, params.getDescent(), paint);
         canvas.drawLine(0, params.getDescent() + areaHeight, DESIGN_WIDTH, params.getDescent() + areaHeight, paint);
         canvas.drawLine(0, params.getDescent() + areaHeight + areaHeight, DESIGN_WIDTH, params.getDescent() + areaHeight + areaHeight, paint);
@@ -145,6 +145,7 @@ public class MyView4 extends View {
 
 //        layout.getLineBounds()
 
+        text = "def,gj,ABC,中文";
         Rect rect = new Rect();
         for (int i = 0; i < layout.getLineCount(); i++) {
             Log.e(TAG, "layout.getLineStart():" + layout.getLineStart(i));
